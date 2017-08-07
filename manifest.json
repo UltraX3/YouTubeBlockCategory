@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+  "name": "YouTube Block Category",
+  "version": "0.1",
+  "permissions": [
+    "storage",
+    "tabs"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://www.youtube.com/*"
+      ],
+      "js": ["jquery-3.2.1.min.js","content.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "browser_action": {
+    "default_popup": "popup.html"
+  }
+}
